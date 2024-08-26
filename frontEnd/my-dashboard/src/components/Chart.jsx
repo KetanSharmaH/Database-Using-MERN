@@ -1,5 +1,5 @@
-import PropTypes from "prop-types";
 import { Line } from "react-chartjs-2";
+
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -22,9 +22,11 @@ ChartJS.register(
   Legend
 );
 
+// eslint-disable-next-line react/prop-types
 function Chart({ title }) {
   const data = {
     labels: ["22:14", "22:34", "22:54", "23:14", "23:34", "23:54", "00:14"],
+    height: 50,
     datasets: [
       {
         label: "Internet Speed (Mbps)",
